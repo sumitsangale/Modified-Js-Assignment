@@ -1,6 +1,6 @@
 console.log("Home page- Personal details");
 
-localStorage.clear();
+// localStorage.clear();
 const name1 = document.getElementById('name');
 const email = document.getElementById('email');
 const phone = document.getElementById('phone');
@@ -119,12 +119,20 @@ submit.addEventListener('click', (e) => {
         if (username == null) {
             nameobj = [];
         }
+        else{
+            nameobj = JSON.parse(username);
+            console.log(nameobj);
+        }
         nameobj.push(name1.value);
         localStorage.setItem('username', JSON.stringify(nameobj));
 
         let phonename = localStorage.getItem('phonename');
         if (phonename == null) {
             phoneobj = [];
+        }
+        else{
+            phoneobj = JSON.parse(phonename);
+            console.log(phoneobj);
         }
         phoneobj.push(phone.value);
         localStorage.setItem('phonename', JSON.stringify(phoneobj));

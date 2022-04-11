@@ -7,7 +7,7 @@ let validdigitlength = false;
 //Get user data from localstorage
 let username = localStorage.getItem('username');
 let setname = JSON.parse(username);
-let str = setname[0];
+let str = setname[setname.length-1];
 let regspace = /\s/;
 let result1 = regspace.exec(str)
 var firstname = str.slice(0, result1.index);
@@ -16,7 +16,7 @@ let setphone = JSON.parse(phonename);
 
 //show details on thanku page 
 let userinfo = document.getElementById('userinfo');
-let html = `<P>Dear ${firstname}, <br> Thank for your inquiry. A 4 digit verification number has been sent to your phone number, ${setphone[0]}. <br> Please enter in the following box and submit for confirmation: </P>`
+let html = `<P>Dear ${firstname}, <br> Thank for your inquiry. A 4 digit verification number has been sent to your phone number, ${setphone[setphone.length-1]}. <br> Please enter in the following box and submit for confirmation: </P>`
 userinfo.innerHTML = html;
 
 //otp generate
@@ -65,6 +65,7 @@ validate.addEventListener('click', (e) => {
             shownew.innerHTML = "<h3>Validation Successfull!!</h3>";
         }, 1000);
         // localStorage.clear();
+        localStorage.removeItem("notes");
         window.location.href = "http://pixel6.co";
     }
     else {
@@ -97,6 +98,7 @@ function invalidotp() {
         shownew.innerHTML = "<h2>404(page not found)</h2>";
     }, 500);
     // localStorage.clear();
+    localStorage.removeItem("notes");
     window.location.href = "http://pixel6.co";
 }
 
