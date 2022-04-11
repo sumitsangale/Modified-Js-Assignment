@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanku-page</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #shownew{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 20px;
+        }
+        input{
+            margin: 15px 0px;
+            padding: 4px;
+        }
+        button{
+            padding: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div id="shownew">
+        <div id="userinfo"></div>
+        <div class="newpage">
+            <input type="number" class="otpbox" id="otp" placeholder="enter otp">
+            <button id="validate" class="btnbox">Validate</button>
+        </div>
+        <div id="otpfail"></div>
+    </div>
+
+    <script src="thankupage.js"></script>
+</body>
+</html>

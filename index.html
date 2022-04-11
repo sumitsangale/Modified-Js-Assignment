@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Details</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #hideold{
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            margin: 10px;
+        }
+        .forminput input{
+            width: 600px;
+            height: 30px;
+            margin: 10px 0px;
+            padding: 4px;
+        }
+        .btn{
+            margin: 15px 0px;
+            padding: 4px;
+        }
+        .shownotvalid{
+            display: none;
+            color: red;
+            font-style: italic;
+            font-size: 14px;
+        }
+        #shownew{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 20px;
+        }
+        .newpage input{
+            margin: 10px 0px;
+            padding: 4px;
+        }
+        .newpage button{
+            padding: 4px;
+        }
+
+    
+    </style>
+</head>
+<body>
+    <div id="hideold">
+        <h1>Personal Details</h1>
+        <form id="formvalid">
+            <div class="forminput">
+                <input type="text" class="" id="name" placeholder="enter your name">
+                <p id="shownotvalid1" class="shownotvalid">(Enter valid name as only alphabet and spaces allowed, min two words each with min 4 chars)</p>
+            </div>
+            <div class="forminput">
+                <input type="text" class="" id="email" placeholder="enter your email">
+                <p id="shownotvalid2" class="shownotvalid">(Enter valid email as example@mail.com)</p>
+            </div>
+            <div class="forminput">
+                <input type="text" class="" id="phone" placeholder="enter your phone">
+                <p id="shownotvalid3" class="shownotvalid">(Enter valid phone Max digit 10, first 3 digit belongs 621-999)</p>
+                <div id="showdetail"></div>
+            </div>
+            <button id="submit" class="btn">Submit</button>
+        </form>
+    </div>
+    <div id="notsub"></div>
+
+
+    <script src="homepage.js"></script>
+</body>
+</html>
